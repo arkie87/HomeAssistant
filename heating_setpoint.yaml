@@ -1,0 +1,5 @@
+"- sensor:\n  - name: heating_setpoint\n    state: '{% if states(\"input_select.heating_setting\"\
+  ) ==  \"Home\"%}  {{ states(\"input_number.heating_home_setpoint\")\n      }}{%\
+  \ elif states(\"input_select.heating_setting\") ==  \"Away\"%}  {{ states(\"input_number.heating_away_setpoint\"\
+  )\n      }}{% elif states(\"input_select.heating_setting\") ==  \"Asleep\"%}  {{\
+  \ states(\"input_number.heating_asleep_setpoint\")\n      }}'\n"
